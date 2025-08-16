@@ -30,7 +30,7 @@ class CNN(nn.Module):
             nn.Linear(256, 128),
             nn.GELU(),
             nn.Dropout(0.2),
-            nn.Linear(128, 10) # 10 tříd pro klasifikaci, gelu pro fine detailing 
+            nn.Linear(128, 10) 
         )
 
     def forward(self, x):
