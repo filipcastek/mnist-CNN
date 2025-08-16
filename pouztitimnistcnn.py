@@ -16,7 +16,7 @@ class CNN(nn.Module):
         )#diamond shaped NN
         self.fc_stack = nn.Sequential(
             nn.Flatten(), #  přidáno pro zploštění výstupu konvoluční vrstvy
-            nn.Linear(256 * 6 * 6, 1024),  # ← upraveno z 7*7 na NE 5x5 proto to nejde pac 6x6 kvůli změnám velikosti po konvolucích achh proto to neslo
+            nn.Linear(256 * 6 * 6, 1024),  
             nn.GELU(),
             nn.Linear(1024, 2048),
             nn.GELU(),
